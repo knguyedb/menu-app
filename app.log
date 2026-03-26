@@ -1,0 +1,353 @@
+2026-03-26 21:08:14 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:08:14 [WARNING]  * Debugger is active!
+2026-03-26 21:08:14 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:08:37 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:08:37 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-26 21:08:37 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-26 21:08:37 [INFO]  * Restarting with stat
+2026-03-26 21:08:41 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:08:41 [WARNING]  * Debugger is active!
+2026-03-26 21:08:41 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:26:31 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:26:31 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-26 21:26:31 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-26 21:26:31 [INFO]  * Restarting with stat
+2026-03-26 21:26:34 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:26:34 [WARNING]  * Debugger is active!
+2026-03-26 21:26:34 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:26:47 [INFO] 127.0.0.1 - - [26/Mar/2026 21:26:47] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:26:48 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:26:48 [DEBUG]    ingredients : cà chua
+2026-03-26 21:26:48 [DEBUG]    diet        : Không
+2026-03-26 21:26:48 [DEBUG]    allergies   : 
+2026-03-26 21:26:48 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:26:48 [ERROR] ❌ Lỗi khi gọi Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 30.542943173s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 30
+}
+]
+Traceback (most recent call last):
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.RESOURCE_EXHAUSTED
+	details = "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 30.542943173s."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.197.42:443 {grpc_status:8, grpc_message:"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 30.542943173s."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\VLU\HK262\Cac_nen_tang_phat_trien_phan_mem\doan\app.py", line 114, in generate_recipe
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 827, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+Please retry in 30.542943173s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+  quota_id: "GenerateContentInputTokensPerModelPerMinute-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.0-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+}
+, retry_delay {
+  seconds: 30
+}
+]
+2026-03-26 21:26:48 [INFO] 127.0.0.1 - - [26/Mar/2026 21:26:48] "[35m[1mPOST /api/generate_recipe HTTP/1.1[0m" 500 -
+2026-03-26 21:28:19 [INFO]  * Detected change in 'D:\\VLU\\HK262\\Cac_nen_tang_phat_trien_phan_mem\\doan\\app.py', reloading
+2026-03-26 21:28:22 [INFO]  * Restarting with stat
+2026-03-26 21:28:27 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:28:27 [WARNING]  * Debugger is active!
+2026-03-26 21:28:27 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:29:52 [INFO] 127.0.0.1 - - [26/Mar/2026 21:29:52] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:29:53 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:29:53 [DEBUG]    ingredients : thịt gà, cà chua
+2026-03-26 21:29:53 [DEBUG]    diet        : Không
+2026-03-26 21:29:53 [DEBUG]    allergies   : 
+2026-03-26 21:29:53 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:29:53 [ERROR] ❌ Lỗi khi gọi Gemini API: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.197.42:443 {grpc_status:5, grpc_message:"models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\VLU\HK262\Cac_nen_tang_phat_trien_phan_mem\doan\app.py", line 121, in generate_recipe
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 827, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-03-26 21:29:53 [INFO] 127.0.0.1 - - [26/Mar/2026 21:29:53] "[35m[1mPOST /api/generate_recipe HTTP/1.1[0m" 500 -
+2026-03-26 21:34:25 [INFO]  * Detected change in 'D:\\VLU\\HK262\\Cac_nen_tang_phat_trien_phan_mem\\doan\\app.py', reloading
+2026-03-26 21:34:27 [INFO]  * Restarting with stat
+2026-03-26 21:34:31 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:34:31 [WARNING]  * Debugger is active!
+2026-03-26 21:34:31 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:35:21 [INFO] 127.0.0.1 - - [26/Mar/2026 21:35:21] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:35:21 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:35:21 [DEBUG]    ingredients : cà chua
+2026-03-26 21:35:21 [DEBUG]    diet        : Không
+2026-03-26 21:35:21 [DEBUG]    allergies   : 
+2026-03-26 21:35:21 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:35:21 [ERROR] ❌ Lỗi khi gọi Gemini API: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+Traceback (most recent call last):
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\grpc_helpers.py", line 55, in error_remapped_callable
+    return callable_(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 1159, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\grpc\_channel.py", line 990, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+	debug_error_string = "UNKNOWN:Error received from peer ipv4:142.250.198.170:443 {grpc_message:"models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.", grpc_status:5}"
+>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\VLU\HK262\Cac_nen_tang_phat_trien_phan_mem\doan\app.py", line 121, in generate_recipe
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 827, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\gapic_v1\method.py", line 128, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_base.py", line 216, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Nguyen\AppData\Local\Programs\Python\Python312\Lib\site-packages\google\api_core\grpc_helpers.py", line 57, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 models/gemini-1.5-flash-latest is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.
+2026-03-26 21:35:21 [INFO] 127.0.0.1 - - [26/Mar/2026 21:35:21] "[35m[1mPOST /api/generate_recipe HTTP/1.1[0m" 500 -
+2026-03-26 21:39:50 [INFO]  * Detected change in 'D:\\VLU\\HK262\\Cac_nen_tang_phat_trien_phan_mem\\doan\\app.py', reloading
+2026-03-26 21:39:52 [INFO]  * Restarting with stat
+2026-03-26 21:39:56 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:39:56 [WARNING]  * Debugger is active!
+2026-03-26 21:39:56 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:40:27 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:40:27 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-03-26 21:40:27 [INFO] [33mPress CTRL+C to quit[0m
+2026-03-26 21:40:27 [INFO]  * Restarting with stat
+2026-03-26 21:40:32 [INFO] ✅ GEMINI_API_KEY đã được tải thành công (độ dài: 39 ký tự).
+2026-03-26 21:40:32 [WARNING]  * Debugger is active!
+2026-03-26 21:40:32 [INFO]  * Debugger PIN: 417-599-314
+2026-03-26 21:40:41 [INFO] 127.0.0.1 - - [26/Mar/2026 21:40:41] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:40:41 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:40:41 [DEBUG]    ingredients : thịt gà
+2026-03-26 21:40:41 [DEBUG]    diet        : Không
+2026-03-26 21:40:41 [DEBUG]    allergies   : 
+2026-03-26 21:40:41 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:40:48 [INFO] ✅ Gemini phản hồi thành công (7.42s — 668 ký tự)
+2026-03-26 21:40:48 [INFO] 📤 [RESPONSE] dish_name='Gà Nướng Mật Ong' | calories='450 kcal (mỗi khẩu phần)'
+2026-03-26 21:40:48 [INFO] 127.0.0.1 - - [26/Mar/2026 21:40:48] "POST /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:41:18 [INFO] 127.0.0.1 - - [26/Mar/2026 21:41:18] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:41:18 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:41:18 [DEBUG]    ingredients : cơm, gà, trứng
+2026-03-26 21:41:18 [DEBUG]    diet        : Không
+2026-03-26 21:41:18 [DEBUG]    allergies   : 
+2026-03-26 21:41:18 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:41:25 [INFO] ✅ Gemini phản hồi thành công (6.46s — 560 ký tự)
+2026-03-26 21:41:25 [INFO] 📤 [RESPONSE] dish_name='CƠM RANG GÀ TRỨNG' | calories='650 kcal (mỗi khẩu phần)'
+2026-03-26 21:41:25 [INFO] 127.0.0.1 - - [26/Mar/2026 21:41:25] "POST /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:41:44 [INFO] 127.0.0.1 - - [26/Mar/2026 21:41:44] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:41:45 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:41:45 [DEBUG]    ingredients : cơm, gà, trứng, cà chua
+2026-03-26 21:41:45 [DEBUG]    diet        : Không
+2026-03-26 21:41:45 [DEBUG]    allergies   : 
+2026-03-26 21:41:45 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:41:52 [INFO] ✅ Gemini phản hồi thành công (7.41s — 472 ký tự)
+2026-03-26 21:41:52 [INFO] 📤 [RESPONSE] dish_name='CƠM CHIÊN GÀ TRỨNG CÀ CHUA' | calories='550 kcal (mỗi khẩu phần)'
+2026-03-26 21:41:52 [INFO] 127.0.0.1 - - [26/Mar/2026 21:41:52] "POST /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:44:18 [INFO] 127.0.0.1 - - [26/Mar/2026 21:44:18] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:44:19 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:44:19 [DEBUG]    ingredients : thịt bò, cơm
+2026-03-26 21:44:19 [DEBUG]    diet        : Keto
+2026-03-26 21:44:19 [DEBUG]    allergies   : 
+2026-03-26 21:44:19 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:44:27 [INFO] ✅ Gemini phản hồi thành công (8.84s — 639 ký tự)
+2026-03-26 21:44:27 [INFO] 📤 [RESPONSE] dish_name='Bò Xào Tỏi Keto' | calories='480 kcal (mỗi khẩu phần)'
+2026-03-26 21:44:27 [INFO] 127.0.0.1 - - [26/Mar/2026 21:44:27] "POST /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:45:45 [INFO] 127.0.0.1 - - [26/Mar/2026 21:45:45] "OPTIONS /api/generate_recipe HTTP/1.1" 200 -
+2026-03-26 21:45:45 [INFO] 📥 [REQUEST] POST /api/generate_recipe từ 127.0.0.1
+2026-03-26 21:45:45 [DEBUG]    ingredients : thịt bò, cơm
+2026-03-26 21:45:45 [DEBUG]    diet        : Keto
+2026-03-26 21:45:45 [DEBUG]    allergies   : 
+2026-03-26 21:45:45 [INFO] 🤖 Đang gọi Gemini API...
+2026-03-26 21:45:57 [INFO] ✅ Gemini phản hồi thành công (11.80s — 743 ký tự)
+2026-03-26 21:45:57 [INFO] 📤 [RESPONSE] dish_name='Thịt Bò Xào Bông Cải Xanh Keto' | calories='680 kcal (mỗi khẩu phần)'
+2026-03-26 21:45:57 [INFO] 127.0.0.1 - - [26/Mar/2026 21:45:57] "POST /api/generate_recipe HTTP/1.1" 200 -
