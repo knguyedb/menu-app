@@ -5,6 +5,23 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import google.generativeai as genai
 
+
+# Thêm import send_from_directory nếu chưa có
+from flask import Flask, request, jsonify, send_from_directory
+
+# ... (giữ nguyên phần cấu hình API Key) ...
+
+@app.route("/")
+def index():
+    # Trả về file giao diện khi truy cập link gốc
+    return send_from_directory(".", "index.html")
+
+@app.route("/api/generate_recipe", methods=["POST", "OPTIONS"])
+def generate_recipe():
+    if request.method == "OPTIONS":
+        return jsonify({"ok": True}), 200
+    
+    # ... (giữ nguyên phần code xử lý Gemini của bạn) ...
 # Load biến môi trường từ file .env (bỏ qua nếu chưa cài python-dotenv)
 try:
     from dotenv import load_dotenv
