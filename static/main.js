@@ -30,7 +30,7 @@ form.addEventListener('submit', async (e) => {
   hideResult();
 
   try {
-    const res = await fetch('https://menu-app-4pqp.onrender.com', {
+    const res = await fetch('/api/generate_recipe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ingredients, diet, allergies }),
